@@ -9,23 +9,27 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 
 public class ConexaoBancoLocal {
-    private final JdbcTemplate connection;
-    
-    public  ConexaoBancoLocal() {
-        BasicDataSource dataSource = new BasicDataSource();
-        
-        // PRECISO ALTERAR AS CREDENCIAIS
+         private JdbcTemplate connection;
 
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/projetoIndividual?autoReconnect=true&useSSL=false");
-        dataSource.setUsername("root");
-        dataSource.setPassword("1234");
+    public ConexaoBancoLocal() {
+
+        BasicDataSource dataSource = new BasicDataSource();
+
         
+        dataSource​.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource​.setUrl("jdbc:mysql://35.171.157.68:3306/hemera");
+        //dataSource​.setUrl("jdbc:mysql://3.83.86.248:3306/hemeratech?serverTimezone=America/Sao_Paulo");
+
+        dataSource​.setUsername("root");
+        dataSource​.setPassword("hemeratech");
+
         this.connection = new JdbcTemplate(dataSource);
+
     }
 
     public JdbcTemplate getConnection() {
-        System.out.println("Acessando o banco de dados!");
+
         return connection;
+
     }
 }
