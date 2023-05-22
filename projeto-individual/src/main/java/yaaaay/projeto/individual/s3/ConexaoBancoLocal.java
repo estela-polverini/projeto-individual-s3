@@ -17,7 +17,7 @@ public class ConexaoBancoLocal {
 
         
         dataSource​.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource​.setUrl("jdbc:mysql://35.171.157.68:3306/hemera");
+        dataSource​.setUrl("jdbc:mysql://35.171.6.104:3306/hemera");
         //dataSource​.setUrl("jdbc:mysql://3.83.86.248:3306/hemeratech?serverTimezone=America/Sao_Paulo");
 
         dataSource​.setUsername("root");
