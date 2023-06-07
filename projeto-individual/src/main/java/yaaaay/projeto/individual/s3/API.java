@@ -72,7 +72,8 @@ public class API {
     }
 
     public String macAddress() {
-        return "36-C9-3D-F8-46-B1";
+        // return "36-C9-3D-F8-46-B1";
+        return redeAtual.getEnderecoMac();
     }
 
     public String totalMemoria() {
